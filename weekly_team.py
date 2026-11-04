@@ -23,10 +23,10 @@ def ask(system, prompt):
                     {"role": "user", "content": prompt},
                 ],
             )
-            print(f"[OK] dùng {model}")
+            print(f"[OK] dùng {model}", flush=True)
             return r.choices[0].message.content
         except Exception as e:
-            print(f"[LỖI] {model}: {e}")
+           print(f"[LỖI] {model}: {e}", flush=True)
     raise RuntimeError("Tất cả provider đều lỗi hoặc hết quota")
 
 ROLES = {
