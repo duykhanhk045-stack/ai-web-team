@@ -13,7 +13,8 @@ def ask(system, prompt):
         if not key:
             continue
         try:
-            client = OpenAI(base_url=base_url, api_key=key)
+            print(f"Đang gọi {model}...", flush=True)
+            client = OpenAI(base_url=base_url, api_key=key, timeout=60, max_retries=0)
             r = client.chat.completions.create(
                 model=model,
                 max_tokens=3000,
