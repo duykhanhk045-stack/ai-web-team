@@ -1,0 +1,27 @@
+name: Yêu cầu tạo web
+description: Mô tả web bạn muốn team AI tạo
+title: "[Yêu cầu web] "
+labels: ["yeu-cau-web"]
+body:
+  - type: input
+    id: ten
+    attributes:
+      label: Tên thư mục web (chữ thường, không dấu, dùng gạch ngang)
+      placeholder: quan-ca-phe
+    validations:
+      required: true
+  - type: textarea
+    id: mo-ta
+    attributes:
+      label: Web này làm gì, dành cho ai?
+    validations:
+      required: true
+  - type: textarea
+    id: trang
+    attributes:
+      label: Các trang cần có
+      placeholder: Trang chủ, Giới thiệu, Liên hệ...
+  - type: input
+    id: phong-cach
+    attributes:
+      label: Màu sắc, phong cách mong muốn
